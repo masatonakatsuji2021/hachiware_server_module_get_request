@@ -1,0 +1,24 @@
+{
+  "name": "hachiware_server_module_get_request",
+  "version": "1.0.0",
+  "description": "Module for receiving request data (GET / POST request) of Web server package \"hachiware_server\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masatonakatsuji2021/hachiware_server_module_get_request.git"
+  },
+  "keywords": [
+    "hachiware",
+    "hachiware_server",
+    "requestdata"
+  ],
+  "author": "Nakatsuji Masato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masatonakatsuji2021/hachiware_server_module_get_request/issues"
+  },
+  "homepage": "https://github.com/masatonakatsuji2021/hachiware_server_module_get_request#readme"
+}
