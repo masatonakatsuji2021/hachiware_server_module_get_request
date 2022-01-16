@@ -11,12 +11,12 @@
 module.exports = function(){
 
      /**
-     * fooKAccess
+     * fookRequest
      * @param {*} resolve 
      * @param {*} req 
      * @returns 
      */
-    this.fooKAccess = function(resolve, req){
+    this.fookRequest = function(resolve, req){
         var url = req.url;
         var queryStr = url.split("?")[1];
         var query = {};
