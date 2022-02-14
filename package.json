@@ -1,6 +1,6 @@
 {
   "name": "hachiware_server_module_get_request",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module for receiving request data (GET / POST request) of Web server package \"hachiware_server\".",
   "main": "index.js",
   "scripts": {
