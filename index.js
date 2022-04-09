@@ -79,7 +79,18 @@ module.exports = function(conf){
                 var bbuff = bodyBuff.split("&");
                 for(var n = 0 ; n < bbuff.length ; n++){
                     var b_ = bbuff[n].split("=");
-                    body[b_[0]] = b_[1];
+                    var field = b_[0];
+
+                    if(field.indexOf("%5B%5D") > 0){
+                        field = field.replace("%5B%5D","");
+                        if(!body[field]){
+                            body[field] = [];                            
+                        }
+                        body[field].push(b_[1]);
+                    }
+                    else{
+                        body[field] = b_[1];    
+                    }
                 }
             }
             else if(contentType == "multipart/form-data"){
