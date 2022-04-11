@@ -70,6 +70,10 @@ module.exports = function(conf){
 
             var contentType = req.headers["content-type"];
             var body = null;
+            
+            if(!bodyBuff){
+                return callback(body);
+            }
 
             bodyBuff = decodeURI(bodyBuff);
             
