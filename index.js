@@ -71,6 +71,8 @@ module.exports = function(conf){
             var contentType = req.headers["content-type"];
             var body = null;
 
+            bodyBuff = decodeURI(bodyBuff);
+            
             if(contentType == "application/json"){
                 body = JSON.parse(bodyBuff);
             }
@@ -81,8 +83,8 @@ module.exports = function(conf){
                     var b_ = bbuff[n].split("=");
                     var field = b_[0];
 
-                    if(field.indexOf("%5B%5D") > 0){
-                        field = field.replace("%5B%5D","");
+                    if(field.indexOf("[]") > 0){
+                        field = field.replace("[]","");
                         if(!body[field]){
                             body[field] = [];                            
                         }
